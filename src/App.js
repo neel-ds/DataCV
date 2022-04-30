@@ -5,14 +5,14 @@ import Login from './Components/Login';
 import {Routes,Route} from 'react-router-dom';
 import Signup from './Components/Register';
 
-import ImageUpload from './Components/ImageUpload';
+
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/dashboard" element={<Main/>}></Route>
-        <Route path="/" element={<ImageUpload/>}></Route>
+        
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/register" element={<Signup/>}></Route>
         

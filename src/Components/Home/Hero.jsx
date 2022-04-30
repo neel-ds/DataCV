@@ -4,6 +4,8 @@ import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Navigate, useNavigate } from 'react-router-dom'
 
+
+
 const navigation = [
   { name: 'Product', href: '#' },
   { name: 'Features', href: '#' },
@@ -17,9 +19,16 @@ export default function Example() {
       <div className="max-w-7xl mx-auto">
         <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
          
-
+          <div>
+          <div>
+                
+                <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl " style={{"color":"#126E82",fontSize:"30px"}} >
+                  DataCV
+                </h1>
+          </div>
           <Popover className="w-screen">
-            <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
+            <div className="relative px-4 sm:px-6 lg:px-8">
+              
               <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
                
                   
@@ -33,7 +42,7 @@ export default function Example() {
                  
                
                 <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8 flex align-items justify-between gap-x-14" style={{'width':'88%'}}>
-                    <div className='flex gap-x-5'>
+                    <div className='flex gap-x-5 items-center'>
                     {navigation.map((item) => (
                         <a key={item.name} href={item.href} className="font-medium text-gray-500 hover:text-gray-900">
                         {item.name}
@@ -98,6 +107,7 @@ export default function Example() {
               </Popover.Panel>
             </Transition>
           </Popover>
+          </div>
 
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
            

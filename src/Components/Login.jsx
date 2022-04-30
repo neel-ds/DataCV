@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { account } from "../services/appwriteConfig";
-import SocialSignin from "./SocialSignin";
 // import { useHistory } from "react-router";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router";
@@ -30,7 +29,7 @@ const Login = () => {
   
     try {
       await account.createSession(userDetails.email, userDetails.password);
-       navigate("/home");
+       navigate("/dashboard");
     } catch (error) {
       toast.error(`${error.message}`)
 
@@ -174,12 +173,14 @@ const Login = () => {
         </div>
         <div className="mb-3">
           <span>New here ? </span>
-          <Link to="/signup">
+          <Link to="/register">
             <button className="btn btn-primary mx-1">Signup</button>
           </Link>
         </div>
 
+
         <button
+        style = {{backgroundColor:"#51c4d3"}}
           type="submit"
           onClick={(e) => loginUser(e)}
           className="btn btn-success"

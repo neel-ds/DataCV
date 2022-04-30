@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import { account } from "../services/appwriteConfig";
 import { toast } from "react-toastify";
@@ -13,22 +13,25 @@ const Signup = () => {
     email: "",
     password: "",
   });
-
+useEffect(()=>{
+  console.log(userDetails);
+},[userDetails])
   const signupUser = async (e) => {
     e.preventDefault();
     if (userDetails.email && userDetails.password && userDetails.name ){
+      console.log(userDetails);
       try {
         await account.create(
          userDetails.email,
          userDetails.password,
          userDetails.name
        );
-      //  await account.createSession(userDetails.email, userDetails.password);
+       await account.createSession(userDetails.email, userDetails.password);
  
       //  await account.createVerification("http://localhost:3000/home");
- 
+      console.log("Success")
        toast.success("Success");
-       navigate('/home')
+        navigate('/dashboard')
 
        
      } catch (error) {

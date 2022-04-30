@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Input, TextField, Button } from "@mui/material";
+import {account} from "../services/appwriteConfig";
 
 import { NFTStorage } from "https://cdn.jsdelivr.net/npm/nft.storage/dist/bundle.esm.min.js";
 export default function ImageUpload(props) {
@@ -95,6 +96,11 @@ export default function ImageUpload(props) {
       }
     }
   };
+  // const [image, setImage] = useState();
+
+
+  
+
   return (
     <div className="mb-5 flex items-center">
       <TextField
@@ -104,6 +110,7 @@ export default function ImageUpload(props) {
         value={title}
         onChange={(e) => {
           setTitle(e.target.value);
+          
         }}
         type="text"
         name="title"

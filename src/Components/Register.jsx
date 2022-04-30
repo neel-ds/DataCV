@@ -10,10 +10,29 @@ const [userDetails, setuserDetails] = useState({
     password : '',}
 )
 
-const signupUser = (e)=>{
+const signupUser = async (e) => {
   e.preventDefault();
-  console.log(userDetails)
-}
+  if (userDetails.email && userDetails.password && userDetails.name ){
+    
+    try {
+      await account.create(
+        userDetails.email,
+        userDetails.password,
+        userDetails.name
+           );
+    await account.createSession(userDetails.email, userDetails.password);
+
+    //  await account.createVerification("http://localhost:3000/home");
+
+     toast.success("Verification email has been sent!");
+   } catch (error) {
+     toast.error(`${e.message}`);
+   }
+  } else {
+    toast.error('Fill out the details first!')
+  }
+ 
+};
   return (
     <div>
       <h2 className="mt-5 text-center">Super Auth</h2>
@@ -64,7 +83,7 @@ const signupUser = (e)=>{
            onChange={(e)=>{
             setuserDetails({
                 ...userDetails,
-                name : e.target.value
+                password : e.target.value
             })
         }}
             type="password"
@@ -80,7 +99,7 @@ const signupUser = (e)=>{
           </Link>
         </div>
 
-        <button onclick={(e)=> signupUser(e)} type="submit" className="btn btn-success">
+        <button onClick={(e)=> signupUser(e)} type="button" className="btn btn-success">
           Signup
         </button>
       </form>

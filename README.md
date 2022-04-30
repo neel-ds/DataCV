@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+**What it does**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+DataCV is a decentralised application that stores data and is based on interplanetary file system(IPFS). It is storage application which comes with top cream privileges. The user can upload any format of data and adhere to their account only. They can access easily anytime and anywhere around the universe when they have one of the node along with them. It is authenticated by containerised app-write.
 
-## Available Scripts
+Features we provide:
 
-In the project directory, you can run:
+- The users can upload single or multiple files at single time to their choice of format. As DataCV supports the formats of image, video, music, files like pdf, docx, apk, etc.
+- Only particular user is authorised to access their data and adhere to the environment of IPFS protocol with transport encryption.
+- Every time potential user after login can access the previous history of all uploads with perks of acknowledgment.
 
-### `npm start`
+**Problem it solves:**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+In a minute, hundred and thousands of data from the centralised server get exposed to public and decentralised application relies on peer to peer(P2P) network which overcomes the drawback of centralised servers by fulfilling the availability and compatibility of the system with more secure manner. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Hence, dataCV reflects the solution in following ways:
 
-### `npm test`
+- Only potential user can access their unique details of past records easily.
+- Even people with less hands on software application can easily interact with dataCV and enjoys the perk of decentralised storage.
+- The privacy and confidentiality of users and their data is maintained.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Challenges we ran into:**
 
-### `npm run build`
+- It was quite tough to save user data in format of array of objects in app-write database.
+- It was challenging task to connect with the IPFS protocol to store files in this network.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**What we learnt:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- We gained the knowledge on IPFS protocol and its working.
+- We gained the insights on how to foster decentralised application on top of IPFS protocol.
+- We learnt how to integrate containerised docker for authentication.
+- We learnt how to interpret with app-write for backend service and database.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Technologies used:**
 
-### `npm run eject`
+The following technologies are used for making this storage DApp on IPFS protocol:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+HTML, CSS, JavaScript, ReactJS, App-write, NFTStorage SDK, Github

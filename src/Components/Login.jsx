@@ -44,7 +44,7 @@ const Login = () => {
       await account.createSession(userDetails.email, userDetails.password);
       console.log("success")
       localStorage.setItem('email',userDetails.email);
-       navigate("/home");
+       navigate("/dashboard");
     } catch (error) {
       // toast.error(`${error.message}`)
 
@@ -119,10 +119,7 @@ onChange={(e) => {
               </Grid>
             </Grid>
             <div className="mb-3">
-          <span>New here ? </span>
-          <Link to="/register">
-            <button className="btn btn-primary mx-1">Signup</button>
-          </Link>
+          
         </div>
             
             <Button 
@@ -137,7 +134,7 @@ onChange={(e) => {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="/register" variant="body2">
                  New here? Sign Up
                 </Link>
               </Grid>

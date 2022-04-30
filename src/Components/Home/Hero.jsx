@@ -19,8 +19,8 @@ export default function Example() {
       <div className="max-w-7xl mx-auto">
         <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
          
-          <div>
-          <div>
+          <div className='flex w-screen mt-10'>
+          <div style={{"width":"20%"}}>
                 
                 <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl " style={{"color":"#126E82",fontSize:"30px"}} >
                   DataCV
@@ -113,8 +113,8 @@ export default function Example() {
            
             <div className="sm:text-center lg:text-left">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl " >
-                <span className="block xl:inline text-color">Storage with a pulp</span>{' '}
-                <span className="block text-indigo-600 xl:inline text-color">of Decentralization</span>
+                <span className="block xl:inline text-color">DataCV - A better</span>{' '}
+                <span className="block text-indigo-600 xl:inline text-color">way to store</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                 <p>DataCV makes decentralized storage accessible for all</p>

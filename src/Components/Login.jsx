@@ -43,6 +43,7 @@ const Login = () => {
     try {
       await account.createSession(userDetails.email, userDetails.password);
       console.log("success")
+      localStorage.setItem('email',userDetails.email);
        navigate("/home");
     } catch (error) {
       // toast.error(`${error.message}`)

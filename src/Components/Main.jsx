@@ -5,7 +5,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import {sdk} from '../services/appwriteConfig';
 export default function Main() {
   const collectionId="626d20572f9fa4534862";
-  const email="newemail@gmail.com"
+  const email=localStorage.getItem('email');
   const [docId,setDocId]=useState();
   
   const [uploads, setUploads] = useState();
